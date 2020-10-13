@@ -120,7 +120,7 @@ $(document).ready(function () {
   });
   //===============instgam==========//
   $('.slider_main').slick({
-    arrows: false,
+    arrows: true,
     autoplay: true,
     dots: false,
     infinite: true,

@@ -388,6 +388,7 @@ header.header {
       line-height: 1.6;
       color: #333; }
     .Volunteers .VolunteersMain .ReadMore .red_button {
+      position: relative;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -398,8 +399,25 @@ header.header {
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
-      .Volunteers .VolunteersMain .ReadMore .red_button:hover {
-        border-bottom: 1px solid #fff; }
+      .Volunteers .VolunteersMain .ReadMore .red_button::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        width: 0%;
+        height: 1px;
+        background: #fff;
+        opacity: 0;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+      .Volunteers .VolunteersMain .ReadMore .red_button:hover, .Volunteers .VolunteersMain .ReadMore .red_button.active {
+        color: #fff; }
+        .Volunteers .VolunteersMain .ReadMore .red_button:hover::before, .Volunteers .VolunteersMain .ReadMore .red_button.active::before {
+          width: 100%;
+          right: auto;
+          left: 0;
+          opacity: 1; }
     .Volunteers .VolunteersMain .icon_flag {
       font-size: 34px;
       color: #000;
@@ -1284,7 +1302,8 @@ header.header {
 
 .latest_news {
   padding: 100px 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  outline: none; }
   .latest_news .latelt_header {
     text-align: center; }
     .latest_news .latelt_header .latest_hed {
@@ -1306,12 +1325,16 @@ header.header {
       line-height: 1.6;
       margin-bottom: 49px; }
   .latest_news .latest_manu {
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    outline: none; }
     .latest_news .latest_manu .latest_item .latest_img {
       position: relative;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
+      .latest_news .latest_manu .latest_item .latest_img img {
+        width: 360px;
+        height: 270px; }
       .latest_news .latest_manu .latest_item .latest_img .latest_pra {
         position: absolute;
         bottom: 0;
@@ -1328,9 +1351,11 @@ header.header {
         -o-transition: all 0.5s;
         transition: all 0.5s; }
         .latest_news .latest_manu .latest_item .latest_img .latest_pra a {
+          outline: none;
           color: #fff;
           text-decoration: none; }
       .latest_news .latest_manu .latest_item .latest_img .icon_news {
+        outline: none;
         position: absolute;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1360,16 +1385,19 @@ header.header {
         width: 100%;
         height: 100%;
         opacity: 0; }
-      .latest_news .latest_manu .latest_item .latest_img:hover .latest_pra {
-        background-color: #ff00008c; }
-      .latest_news .latest_manu .latest_item .latest_img:hover .icon_news {
-        background: rgba(0, 0, 0, 0.4); }
-      .latest_news .latest_manu .latest_item .latest_img:hover .icon_news {
-        opacity: 1; }
+      .latest_news .latest_manu .latest_item .latest_img:hover {
+        border: 0; }
+        .latest_news .latest_manu .latest_item .latest_img:hover .latest_pra {
+          background-color: #ff00008c; }
+        .latest_news .latest_manu .latest_item .latest_img:hover .icon_news {
+          background: rgba(0, 0, 0, 0.4); }
+        .latest_news .latest_manu .latest_item .latest_img:hover .icon_news {
+          opacity: 1; }
     .latest_news .latest_manu .latest_item .red_more {
       text-align: center;
       margin-top: 25px; }
       .latest_news .latest_manu .latest_item .red_more a {
+        outline: none;
         text-decoration: none;
         font-size: 18px;
         font-weight: 400;
@@ -1379,10 +1407,17 @@ header.header {
         -o-transition: all 0.5s;
         transition: all 0.5s; }
         .latest_news .latest_manu .latest_item .red_more a i {
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
           padding-top: 2px;
-          margin-left: 10px; }
+          margin-left: 10px;
+          margin-right: 20px; }
         .latest_news .latest_manu .latest_item .red_more a:hover {
           color: #eb1b2b; }
+          .latest_news .latest_manu .latest_item .red_more a:hover i {
+            margin-left: 20px;
+            margin-right: 10px; }
 
 .brand_worp {
   padding: 100px 0; }
