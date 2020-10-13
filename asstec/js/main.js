@@ -160,132 +160,117 @@ $(document).ready(function () {
   //=====================countundoen ========//
 
 
-  $('.latest_news_slied').slick({
-    arrows: false,
-    autoplay: true,
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          dots: false,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          dots: false,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          dots: false,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          dots: false,
-        }
-      }
-    ]
-  });
-
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("countDown").innerHTML =
-  "<span>"+days + "<br>" + "<span>"+ "days "+"</span>" +"</span>" +
-  "<span>"+hours + "<br>" + "<span>"+ "hours "+"</span>" +"</span>"+
-  "<span>"+ minutes + "<br>"+ "<span>"+ "minutes "+"</span>" +"</span>"+
-  "<span>"+ seconds + "<br>"+ "<span>"+ "second "+"</span>" +"</span>";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countDown").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-    
-//========== filtering========== //
-
-function isoTopActive() {
-  // Iso top js
-  $(".filtering_item_row").isotope({
-      itemSelector: '.custom_col',
-      layoutMode: 'fitRows'
-  });
-  var isOacTive = $('.isotopmein button').click(function () {
-      $(".isotopmein button").removeClass("active");
-      $(this).addClass("active");
-      var selector = $(this).attr('data-filter');
-      $(".filtering_item_row").isotope({
-          filter: selector,
-          animationOptions: {
-              duration: 750,
-              easing: 'linear',
-              queue: false,
+    $('.latest_news_slied').slick({
+      arrows: false,
+      autoplay: true,
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            dots: false,
           }
-      });
-      return false;
-  });
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            dots: false,
+          }
+        }
+      ]
+    });
 
-}
-isoTopActive();
-      /*---------LIGHT-BOX js-----------*/
-function lightBoxImages() {
+  var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
-  var selectorG = '.icon_link';
-  if($(selectorG).length){
-      var instanceG = $(selectorG).imageLightbox({
-          quitOnDocClick:	false,
-          button:         true,
-          activity:       true,
-          overlay:        true,
-          arrows:         true,
-          preloadNext:    true,
-      });		
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("countDown").innerHTML =
+    "<span>"+days + "<br>" + "<span>"+ "days "+"</span>" +"</span>" +
+    "<span>"+hours + "<br>" + "<span>"+ "hours "+"</span>" +"</span>"+
+    "<span>"+ minutes + "<br>"+ "<span>"+ "minutes "+"</span>" +"</span>"+
+    "<span>"+ seconds + "<br>"+ "<span>"+ "second "+"</span>" +"</span>";
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countDown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+
+    
+  //========== filtering========== //
+
+  function isoTopActive() {
+    // Iso top js
+    $(".filtering_item_row").isotope({
+        itemSelector: '.custom_col',
+        layoutMode: 'fitRows'
+    });
+    var isOacTive = $('.isotopmein button').click(function () {
+        $(".isotopmein button").removeClass("active");
+        $(this).addClass("active");
+        var selector = $(this).attr('data-filter');
+        $(".filtering_item_row").isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false,
+            }
+        });
+        return false;
+    });
+
   }
-}
-lightBoxImages();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  isoTopActive();
+        /*---------LIGHT-BOX js-----------*/
+  function lightBoxImages() {
+    var selectorG = '.icon_link';
+    if($(selectorG).length){
+        var instanceG = $(selectorG).imageLightbox({
+            quitOnDocClick:	false,
+            button:         true,
+            activity:       true,
+            overlay:        true,
+            arrows:         true,
+            preloadNext:    true,
+        });		
+    }
+  }
+  lightBoxImages();
 
 
 

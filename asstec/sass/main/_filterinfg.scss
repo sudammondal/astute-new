@@ -29,12 +29,14 @@
 
                 .img_overlay {
                     position: relative;
+                    overflow: hidden;
 
                     .image {
                         display: block;
                         transition: all 0.5s;
                         max-width: 100%;
                         width: 100%;
+                        line-height: 0;
 
                     }
 
@@ -129,6 +131,21 @@
 
         }
     }
-
-
 }
+    //=====lightbox =====// 
+    .imagelightbox-arrow-right:before {
+    font-family: 'fontawesome';
+    content: "\f105" !important;
+    }
+    .imagelightbox-arrow-left:before {
+    content: "\f104" !important;
+    font-family: 'fontawesome';
+    }
+    .imagelightbox-close {
+    top: 10px;
+    }
+    
+    .imagelightbox-arrow {
+    margin-top: 0;
+    }
+    
