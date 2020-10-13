@@ -179,6 +179,7 @@ header.header {
         background-color: transparent; }
         header.header.fixedMenu .navbar .maincollaps .donate_button .donatebtn:hover {
           background: #eb1b2b;
+          border: 1px solid #eb1b2b;
           color: #fff;
           -webkit-box-shadow: 0px 20px 80px 0px black;
           box-shadow: 0px 20px 80px 0px black; }
@@ -258,7 +259,8 @@ header.header {
       border: 1px solid #eb1b2b; }
 
 .about_us {
-  padding: 95px 0; }
+  padding: 95px 0;
+  overflow: hidden; }
   .about_us .about_main .about_sub {
     font-size: 18px;
     font-weight: 500;
@@ -324,42 +326,40 @@ header.header {
       border: 2px solid #eb1b2b; }
 
 .Mission {
-  padding-bottom: 50px; }
-  .Mission .mainMission {
-    margin: 100px 0 0; }
-    .Mission .mainMission .MissionTitle {
-      position: relative; }
-      .Mission .mainMission .MissionTitle::before {
-        width: 2px;
-        height: 100%;
-        top: 3px;
-        right: 55px;
-        background: #eb1b2b;
-        content: "";
-        position: absolute; }
-      .Mission .mainMission .MissionTitle::after {
-        width: 2px;
-        height: 100%;
-        top: 3px;
-        right: 50px;
-        background: #eb1b2b;
-        content: "";
-        position: absolute; }
-      .Mission .mainMission .MissionTitle .Missionsub {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 0; }
-      .Mission .mainMission .MissionTitle .Missionhead {
-        margin-bottom: 0px;
-        font-weight: 600;
-        line-height: 1.2;
-        font-size: 40px; }
-    .Mission .mainMission .massionPra {
-      max-width: 495px;
-      font-size: 14px;
-      margin-bottom: 0;
-      padding-top: 12px;
-      margin-left: -53px; }
+  padding: 50px 0; }
+  .Mission .mainMission .MissionTitle {
+    position: relative; }
+    .Mission .mainMission .MissionTitle::before {
+      width: 2px;
+      height: 100%;
+      top: 3px;
+      right: 55px;
+      background: #eb1b2b;
+      content: "";
+      position: absolute; }
+    .Mission .mainMission .MissionTitle::after {
+      width: 2px;
+      height: 100%;
+      top: 3px;
+      right: 50px;
+      background: #eb1b2b;
+      content: "";
+      position: absolute; }
+    .Mission .mainMission .MissionTitle .Missionsub {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0; }
+    .Mission .mainMission .MissionTitle .Missionhead {
+      margin-bottom: 0px;
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: 40px; }
+  .Mission .mainMission .massionPra {
+    max-width: 495px;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    margin-left: -53px; }
 
 .Volunteers {
   padding-bottom: 70px; }
@@ -369,8 +369,8 @@ header.header {
     -o-transition: all 0.5s;
     transition: all 0.5s;
     background: #fff;
-    -webkit-box-shadow: 0px 6px 40px 6px #00000021;
-    box-shadow: 0px 6px 40px 6px #00000021;
+    -webkit-box-shadow: 0px 6px 14px 0px #00000024;
+    box-shadow: 0px 6px 14px 0px #00000024;
     margin-bottom: 30px; }
     .Volunteers .VolunteersMain .VolunteersHead {
       margin: 5px 0 10px;
@@ -409,8 +409,8 @@ header.header {
       -webkit-transform: translateY(-5px);
       -ms-transform: translateY(-5px);
       transform: translateY(-5px);
-      -webkit-box-shadow: 0px 6px 40px 6px #0000004a;
-      box-shadow: 0px 6px 40px 6px #0000004a; }
+      -webkit-box-shadow: 0px 6px 40px 1px #0000005e;
+      box-shadow: 0px 6px 40px 1px #0000005e; }
       .Volunteers .VolunteersMain:hover .VolunteersHead {
         color: #fff; }
       .Volunteers .VolunteersMain:hover .VolunteersPra {
@@ -749,24 +749,33 @@ header.header {
     .VOLUNTEER .ovErlay:hover .overadhed {
       color: #fff; }
 
-.countdown {
-  background-image: url(../imgs/cbn.jpg);
-  padding: 100px 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative; }
-  .countdown::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    position: absolute;
-    opacity: 0.9; }
-  .countdown .media_header .madia_color {
-    color: #fff; }
+.countdown .media_header .madia_color {
+  color: #fff; }
+
+.countdown span {
+  background-color: red;
+  font-size: 60px;
+  color: #fff;
+  margin: 0 10px 0 auto;
+  text-align: center;
+  display: inline-block;
+  max-width: 200px;
+  width: 100%;
+  padding: 60px;
+  line-height: 30px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle; }
+  .countdown span:last-child {
+    margin-right: 0; }
+  .countdown span span {
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px; }
 
 .Goalsworp {
   text-align: center;
@@ -1142,7 +1151,8 @@ header.header {
         border-color: #fff; }
 
 .MEMBER_revew {
-  margin: 100px 0 0; }
+  margin: 100px 0 0;
+  overflow: hidden; }
   .MEMBER_revew .MissionTitle {
     position: relative; }
     .MEMBER_revew .MissionTitle::before {
@@ -1179,12 +1189,12 @@ header.header {
     padding: 33px 0 82px; }
     .MEMBER_revew .testmonials_slied .main_slieda_ttstmonials .test_slid_items {
       outline: none;
-      padding: 10px;
+      padding: 0px;
       background-color: #fff;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s;
-      margin: 15px 15px 30px 0; }
+      margin: 0px 15px 0; }
       .MEMBER_revew .testmonials_slied .main_slieda_ttstmonials .test_slid_items .test_item {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1242,7 +1252,10 @@ header.header {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
       .vote_video .video_vote .video_icon a i {
         color: #fff;
         border: 5px solid #fff;
@@ -1254,6 +1267,13 @@ header.header {
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
+      .vote_video .video_vote .video_icon a:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
+        .vote_video .video_vote .video_icon a:hover i {
+          color: #eb1b2b;
+          border: 5px solid #eb1b2b; }
   .vote_video .video_vote .video_hed {
     color: #fff;
     font-size: 35px;
@@ -1367,14 +1387,16 @@ header.header {
 .brand_worp {
   padding: 100px 0; }
   .brand_worp .brand_item {
-    border: 1px solid #ddd;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
-    .brand_worp .brand_item:hover {
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      transform: scale(1.2); }
+    text-align: center; }
+    .brand_worp .brand_item img {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      border: 1px solid #ddd; }
+      .brand_worp .brand_item img:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2); }
 
 .Contact_worp {
   background-image: url(../imgs/cbn.jpg);
@@ -1514,7 +1536,7 @@ header.header {
     position: relative; }
     .footer_worp .Newsletter .mail_formet .inputfrom .mail_from {
       border: 1px solid #ddd;
-      padding: 5px 26px 6px;
+      padding: 5px 26px 6px 10px;
       background: #fff;
       color: #eb1b2b;
       -webkit-box-shadow: none;
@@ -1546,11 +1568,50 @@ header.header {
         font-size: 18px; }
   .footer_worp .Newsletter .media {
     margin-bottom: 30px; }
-    .footer_worp .Newsletter .media .imgcol {
-      width: 98px;
-      height: 83px; }
+    .footer_worp .Newsletter .media .mediaIMg {
+      margin-right: 10px;
+      position: relative;
+      width: 98px; }
+      .footer_worp .Newsletter .media .mediaIMg .imgcol {
+        width: 98px;
+        height: 83px; }
+      .footer_worp .Newsletter .media .mediaIMg::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        position: absolute;
+        opacity: 0.4;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+      .footer_worp .Newsletter .media .mediaIMg .bloghovericon {
+        position: absolute;
+        top: 60%;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0; }
+        .footer_worp .Newsletter .media .mediaIMg .bloghovericon .weightplus {
+          font-size: 16px;
+          color: #fff; }
+      .footer_worp .Newsletter .media .mediaIMg:hover {
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        .footer_worp .Newsletter .media .mediaIMg:hover .bloghovericon {
+          top: 50%;
+          opacity: 1; }
+        .footer_worp .Newsletter .media .mediaIMg:hover::before {
+          opacity: 0.7; }
     .footer_worp .Newsletter .media .media-body {
-      margin: auto 0 auto -2px; }
+      margin: auto 0 auto 2px; }
       .footer_worp .Newsletter .media .media-body a {
         text-decoration: none; }
         .footer_worp .Newsletter .media .media-body a .modalhed {
@@ -1613,7 +1674,10 @@ header.header {
           height: 100%;
           background-color: #000000;
           position: absolute;
-          opacity: 0.4; }
+          opacity: 0.4;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
         .footer_worp .Newsletter .Instagram .castomRow .castomCol .itme_img:hover .imgangor {
           -webkit-transition: all 0.5s;
           -o-transition: all 0.5s;
@@ -1659,9 +1723,40 @@ header.header {
   .Mission .mainMission .MissionTitle .Missionhead {
     font-size: 30px; }
   .MEMBER_revew .MissionTitle .Missionhead {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .Newsletter {
+    margin-bottom: 30px; } }
+
+@media (max-width: 991px) {
+  .brand_worp .brand_item {
+    margin-bottom: 30px; }
+  .header_top .top_head .contac a {
+    font-size: 13px; }
+  .countain_worp .main_counting {
+    margin-bottom: 30px; }
+  .Mission .mainMission .MissionTitle::before {
+    display: none; }
+  .Mission .mainMission .MissionTitle::after {
+    display: none; }
+  .Mission .mainMission .massionPra {
+    max-width: 100%;
+    margin: 0; }
+  .VOLUNTEER .ovErlay {
+    margin-bottom: 30px; }
+  .MEMBER_revew .MissionTitle::before {
+    display: none; }
+  .MEMBER_revew .MissionTitle::after {
+    display: none; }
+  .MEMBER_revew .massionPra {
+    max-width: 100%;
+    margin: 0; }
+  .MEMBER_revew .testmonials_slied .main_slieda_ttstmonials .test_slid_items .slid_pra2 {
+    max-width: 100%;
+    margin: 0; } }
 
 @media (max-width: 768px) {
+  .header_top .top_head .contac a {
+    font-size: 13px; }
   .navbar_collapse .main_manu {
     overflow-y: scroll;
     height: 200px;
@@ -1701,10 +1796,215 @@ header.header {
   .brand_worp .brand_item {
     margin-bottom: 30px; } }
 
+@media (max-width: 736px) {
+  .header_top .top_head .contac a {
+    font-size: 9px; }
+  .header_top .top_head .icon_manu .icon_list .icons {
+    font-size: 12px; }
+  .banner_worp .banner .main_banner .banerHed {
+    font-size: 40px; }
+  .banner_worp .banner .main_banner .banner_pra {
+    font-weight: 300; }
+  .banner_worp .banner .main_banner .banner_button {
+    font-size: 12px; }
+  .banner_worp .banner .main_banner .bnarbtn {
+    font-size: 12px; }
+  .about_us .about_main .about_sub {
+    font-size: 16px; }
+  .about_us .about_main .about_head {
+    font-size: 30px;
+    font-weight: 600; }
+  .about_us .about_main .aboutPrea {
+    font-size: 13px; }
+  .about_us .about_main .sigensar img {
+    width: 100px; }
+  .countain_worp .main_counting .pra_count {
+    font-size: 14px;
+    font-weight: 400; }
+  .countain_worp .main_counting .counting {
+    font-size: 35px;
+    font-weight: 600; }
+  .Mission .mainMission .MissionTitle .Missionsub {
+    font-size: 16px;
+    font-weight: 400; }
+  .Mission .mainMission .MissionTitle .Missionhead {
+    font-size: 25px; }
+  .Mission .mainMission .MissionTitle::before {
+    display: none; }
+  .Mission .mainMission .MissionTitle::after {
+    display: none; }
+  .Mission .mainMission .massionPra {
+    max-width: 100%; }
+  .watch_worp .watchmain .watch .watch_hed {
+    font-size: 20px;
+    font-weight: 400; }
+  .watch_worp .watchmain .watch .watchHed {
+    font-size: 30px; }
+  .watch_worp .watchmain .watch .watch_pra {
+    max-width: 619px;
+    font-size: 16px; }
+  .watch_worp .watchmain .watch .bnarbtn {
+    font-weight: 400;
+    font-size: 12; }
+  .Media_worp .media_header .media_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .manu_Iteme .isotop_manu .isotopmein .list_item {
+    margin-bottom: 10px; }
+  .VOLUNTEER .ovErlay .overlay_header .overadhed {
+    font-size: 16px; }
+  .VOLUNTEER .ovErlay .overlay_header .overarpra {
+    font-size: 12px; }
+  .election_worp .media_header .media_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .election_worp .media_header .electio_prag {
+    max-width: 100%; }
+  .election_worp .counter_bnt a {
+    border-radius: 50px;
+    font-size: 14px;
+    border-bottom: 50px; }
+  .Goalsworp .media_header .media_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .MEMBER_revew .testmonials_slied .main_slieda_ttstmonials .test_slid_items .slid_pra2 {
+    max-width: 100%; }
+  .MEMBER_revew .MissionTitle::before {
+    display: none; }
+  .MEMBER_revew .MissionTitle::after {
+    display: none; }
+  .MEMBER_revew .massionPra {
+    max-width: 100%;
+    margin: 0; }
+  .latest_news .latelt_header .latest_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .latest_news .latest_manu .latest_item .latest_img .latest_pra {
+    font-size: 14px; }
+  .Contact_worp .contact_header .contact_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .Contact_worp .contact_item {
+    text-align: center;
+    margin-bottom: 30px; }
+  .Contact_worp .counter_bnt a {
+    padding: 11px 45px; }
+  .footer_worp .Newsletter .Instagram .castomRow .castomCol .itme_img .imgangor img {
+    width: 100%; }
+  .footer .futtrbottom {
+    text-align: center; }
+  .footer .footer_bottom {
+    text-align: center; } }
+
 @media (max-width: 420px) {
   .header_top {
     display: none; }
   .banner_worp .banner .main_banner .banerHed {
     font-size: 30px; }
+  .about_us .about_main .about_head {
+    font-size: 30px; }
+  .countain_worp .main_counting .counting {
+    font-size: 35px;
+    font-weight: 600; }
+  .Mission .mainMission .MissionTitle .Missionhead {
+    font-size: 22px; }
+  .Mission .mainMission .MissionTitle::before {
+    display: none; }
+  .Mission .mainMission .MissionTitle::after {
+    display: none; }
+  .MEMBER_revew .MissionTitle::after {
+    display: none; }
+  .MEMBER_revew .MissionTitle::before {
+    display: none; }
+  .MEMBER_revew .massionPra {
+    max-width: 100%;
+    margin: 0; }
+  .watch_worp .watchmain .watch .watch_hed {
+    font-size: 18px;
+    font-weight: 400; }
+  .watch_worp .watchmain .watch .watchHed {
+    font-size: 30px; }
+  .manu_Iteme .isotop_manu .isotopmein .list_item {
+    margin: 10px 5px 0; }
+  .Media_worp .media_header .media_hed {
+    font-size: 30px; }
+  .Mission .mainMission .MissionTitle .Missionhead {
+    font-size: 20px; }
+  .Mission .mainMission .MissionTitle .Missionsub {
+    font-size: 16px;
+    font-weight: 400; }
+  .election_worp .media_header .media_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .Goalsworp .media_header .media_hed {
+    font-size: 30px; }
+  .INSTAGRAM_worp .media_header .media_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .MEMBER_revew .MissionTitle .Missionhead {
+    font-size: 30px; }
+  .MEMBER_revew .MissionTitle .Missionsub {
+    font-weight: 400; }
+  .vote_video .video_vote .video_hed {
+    font-size: 30px; }
+  .latest_news .latelt_header .latest_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .Contact_worp .contact_header .contact_hed {
+    font-size: 30px;
+    font-weight: 600; }
+  .Contact_worp .contact_item {
+    margin-bottom: 30px; }
+  .footer .futtrbottom {
+    text-align: center;
+    margin-bottom: 10px; }
+  .footer .footer_bottom {
+    text-align: center; }
+  .footer_worp .Newsletter .pranews {
+    max-width: 100%; } }
+
+@media (max-width: 375px) {
+  .banner_worp .banner .main_banner .banerHed {
+    font-size: 29px; }
+  .banner_worp .banner .main_banner .banner_pra {
+    display: none; }
   .banner_worp .banner .main_banner .banner_button {
-    padding: 30px; } }
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0px 15px; }
+  .banner_worp .banner .main_banner {
+    text-align: center; }
+    .banner_worp .banner .main_banner .bnarbtn {
+      font-size: 10px;
+      font-weight: 400;
+      padding: 0px 15px; } }
+
+@media (max-width: 320px) {
+  .banner_worp .banner .main_banner .banerHed {
+    font-size: 22px;
+    margin-bottom: 30px; }
+  .about_us .about_main .about_head {
+    font-size: 24px; }
+  .watch_worp .watchmain .watch .watchHed {
+    font-size: 24px; }
+  .Media_worp .media_header .media_hed {
+    font-size: 25px; }
+  .election_worp .media_header .media_hed {
+    font-size: 22px;
+    font-weight: 600; }
+  .Goalsworp .goalaeorp_main .nav_manu .mav_items .nav_link {
+    padding: 8px 20px; }
+  .MEMBER_revew .MissionTitle .Missionhead {
+    font-size: 25px; }
+  .MEMBER_revew .testmonials_slied .main_slieda_ttstmonials .test_slid_items .test_item .test_title .slid_hed {
+    font-size: 18px;
+    font-weight: 400; }
+  .vote_video .video_vote .video_hed {
+    font-size: 25px; }
+  .latest_news .latelt_header .latest_hed {
+    font-size: 25px; }
+  .Contact_worp .contact_header .contact_hed {
+    font-size: 25px;
+    font-weight: 600; }
+  .footer_worp .Newsletter .hednews {
+    font-size: 20px; } }
