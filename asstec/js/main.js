@@ -233,4 +233,60 @@ var x = setInterval(function() {
     
 //========== filtering========== //
 
+function isoTopActive() {
+  // Iso top js
+  $(".filtering_item_row").isotope({
+      itemSelector: '.custom_col',
+      layoutMode: 'fitRows'
+  });
+  var isOacTive = $('.isotopmein button').click(function () {
+      $(".isotopmein button").removeClass("active");
+      $(this).addClass("active");
+      var selector = $(this).attr('data-filter');
+      $(".filtering_item_row").isotope({
+          filter: selector,
+          animationOptions: {
+              duration: 750,
+              easing: 'linear',
+              queue: false,
+          }
+      });
+      return false;
+  });
+
+}
+isoTopActive();
+      /*---------LIGHT-BOX js-----------*/
+function lightBoxImages() {
+
+  var selectorG = '.icon_link';
+  if($(selectorG).length){
+      var instanceG = $(selectorG).imageLightbox({
+          quitOnDocClick:	false,
+          button:         true,
+          activity:       true,
+          overlay:        true,
+          arrows:         true,
+          preloadNext:    true,
+      });		
+  }
+}
+lightBoxImages();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

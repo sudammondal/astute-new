@@ -556,21 +556,22 @@ header.header {
     .manu_Iteme .isotop_manu .isotopmein .list_item {
       display: inline-block;
       background-color: transparent;
-      margin: 0 5px 0; }
-      .manu_Iteme .isotop_manu .isotopmein .list_item a {
-        font-size: 13px;
-        font-weight: 500;
-        border: 1px solid #f3eaea;
-        text-transform: uppercase;
-        padding: 4px 28px;
-        border-color: #eb1b2b;
-        border-radius: 30px;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-        color: #333;
-        text-decoration: none; }
-      .manu_Iteme .isotop_manu .isotopmein .list_item.active a, .manu_Iteme .isotop_manu .isotopmein .list_item:hover a {
+      margin: 0 5px 0;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid #f3eaea;
+      text-transform: uppercase;
+      padding: 4px 28px;
+      border-radius: 30px;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      color: #333;
+      text-decoration: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      .manu_Iteme .isotop_manu .isotopmein .list_item.active, .manu_Iteme .isotop_manu .isotopmein .list_item:hover {
+        border: 1px solid #eb1b2b;
         background-color: #eb1b2b;
         color: #fff; }
 
