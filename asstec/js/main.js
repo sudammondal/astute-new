@@ -119,9 +119,9 @@ $(document).ready(function () {
     ]
   });
   //===============instgam==========//
-  $('.slider_main').slick({
+  $('.slider_main, .brabd_slied').slick({
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     dots: false,
     infinite: true,
     speed: 300,

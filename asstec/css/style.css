@@ -149,14 +149,13 @@ header.header {
       margin-left: 30px;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
-      transition: all 0.5s;
-      border: 1px solid transparent; }
+      transition: all 0.5s; }
       header.header .navbar .maincollaps .donate_button .donatebtn:hover {
         background: transparent;
-        border: 1px solid #fff;
+        border-color: #fff;
         color: #eb1b2b;
-        -webkit-box-shadow: 0px 20px 80px 0px black;
-        box-shadow: 0px 20px 80px 0px black; }
+        -webkit-box-shadow: 0px 20px 80px 0px #000000b0;
+        box-shadow: 0px 20px 80px 0px #000000b0; }
   header.header.fixedMenu {
     background: #000; }
     header.header.fixedMenu .navbar {
@@ -181,8 +180,8 @@ header.header {
           background: #eb1b2b;
           border: 1px solid #eb1b2b;
           color: #fff;
-          -webkit-box-shadow: 0px 20px 80px 0px black;
-          box-shadow: 0px 20px 80px 0px black; }
+          -webkit-box-shadow: 0px 20px 80px 0px #000000b0;
+          box-shadow: 0px 20px 80px 0px #000000b0; }
 
 .banner_worp {
   background-image: url(../imgs/slider-1.jpg);
@@ -278,11 +277,13 @@ header.header {
     line-height: 1.6; }
   .about_us .about_main .aboutPrea2 {
     font-size: 14px;
-    margin-bottom: 17px;
+    margin-bottom: 30px;
     line-height: 1.6; }
-  .about_us .about_imgs img {
-    width: 470px;
-    height: 428px; }
+  .about_us .about_imgs {
+    text-align: right; }
+    .about_us .about_imgs img {
+      width: 470px;
+      height: 428px; }
 
 .countain_worp {
   background-image: url(../imgs/cbn.jpg);
@@ -359,7 +360,7 @@ header.header {
     font-size: 14px;
     margin-bottom: 0;
     padding-top: 12px;
-    margin-left: -53px; }
+    margin-left: -35px; }
 
 .Volunteers {
   padding-bottom: 70px; }
@@ -478,7 +479,7 @@ header.header {
     border: 1px solid #eb1b2b;
     color: #fff;
     background: #eb1b2b;
-    padding: 7px 29px;
+    padding: 8px 30px;
     font-weight: 700;
     text-transform: uppercase;
     box-shadow: none;
@@ -493,7 +494,7 @@ header.header {
     font-family: 'Montserrat', sans-serif; }
     .watch_worp .watchmain .watch .bnarbtn:hover {
       background: #fff;
-      border: 1px solid #fff;
+      border-color: #fff;
       color: #eb1b2b; }
   .watch_worp .video_main {
     position: absolute;
@@ -516,14 +517,21 @@ header.header {
       text-decoration: none;
       color: #fff;
       font-weight: 600;
-      margin-right: 15px; }
+      margin-right: 15px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
       .watch_worp .video_main .viveoLink i {
         margin-right: 10px;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
-      .watch_worp .video_main .viveoLink:hover i {
+      .watch_worp .video_main .viveoLink:hover {
         color: #eb1b2b; }
+        .watch_worp .video_main .viveoLink:hover i {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2); }
 
 .Media_worp {
   padding: 95px 0 0px;
@@ -576,8 +584,7 @@ header.header {
         color: #fff; }
 
 .Media_filtring {
-  padding: 50px 0;
-  overflow-x: hidden; }
+  padding: 50px 0; }
   .Media_filtring .filtering_item_row .custom_col .media_overlay {
     position: relative;
     overflow: hidden; }
@@ -601,7 +608,17 @@ header.header {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        color: #fff; }
+        color: #fff;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        border: 1px solid transparent; }
+      .Media_filtring .filtering_item_row .custom_col .media_overlay .litebox:hover a {
+        background-color: #f7091d;
+        border: 1px solid #ddd;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
     .Media_filtring .filtering_item_row .custom_col .media_overlay .img_overlay {
       position: relative;
       overflow: hidden; }
@@ -855,6 +872,15 @@ header.header {
           background-color: #eb1b2b; }
     .Goalsworp .goalaeorp_main .tab_content .tab_pane .video_worp {
       position: relative; }
+      .Goalsworp .goalaeorp_main .tab_content .tab_pane .video_worp::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        position: absolute;
+        opacity: 0.7; }
       .Goalsworp .goalaeorp_main .tab_content .tab_pane .video_worp .icon_viedo {
         position: absolute;
         top: 50%;
@@ -871,8 +897,8 @@ header.header {
           display: inline-flex;
           text-decoration: none; }
           .Goalsworp .goalaeorp_main .tab_content .tab_pane .video_worp .icon_viedo a i {
-            color: #fff;
-            border: 5px solid #fff;
+            color: #eb1b2b;
+            border: 5px solid #eb1b2b;
             width: 80px;
             height: 80px;
             line-height: 70px;
@@ -919,42 +945,45 @@ header.header {
           line-height: 20px;
           font-size: 20px;
           text-transform: capitalize; }
-    .Goalsworp .goalaeorp_main .tab_content .mediamanu .media {
-      padding: 0 0 15px;
-      margin: 0 0 15px;
-      border-bottom: 1px solid #ddd; }
-      .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .imgcol {
-        margin-right: 15px; }
-      .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a {
-        text-decoration: none; }
-        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a .modalhed {
+    .Goalsworp .goalaeorp_main .tab_content .mediamanu {
+      overflow-y: scroll;
+      height: 300px; }
+      .Goalsworp .goalaeorp_main .tab_content .mediamanu .media {
+        padding: 0 0 15px;
+        margin: 0 0 15px;
+        border-bottom: 1px solid #ddd; }
+        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .imgcol {
+          margin-right: 15px; }
+        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a {
+          text-decoration: none; }
+          .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a .modalhed {
+            color: #333;
+            text-transform: capitalize;
+            font-weight: 600;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+            font-size: 18px;
+            line-height: 1.2;
+            margin-bottom: 0; }
+          .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a:hover .modalhed {
+            color: #eb1b2b; }
+        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .tabmodl_pra {
+          margin-bottom: 2px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.6;
+          color: #333; }
+        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .mdspan {
           color: #333;
-          text-transform: capitalize;
-          font-weight: 600;
-          -webkit-transition: .5s;
-          -o-transition: .5s;
-          transition: .5s;
-          font-size: 18px;
-          line-height: 1.2;
-          margin-bottom: 0; }
-        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body a:hover .modalhed {
-          color: #eb1b2b; }
-      .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .tabmodl_pra {
-        margin-bottom: 2px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.6;
-        color: #333; }
-      .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .mdspan {
-        color: #333;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 14px;
-        line-height: 0;
-        margin-right: 10px; }
-        .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .mdspan i {
-          padding-right: 5px; }
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 0;
+          margin-right: 10px; }
+          .Goalsworp .goalaeorp_main .tab_content .mediamanu .media .media-body .mdspan i {
+            padding-right: 5px; }
   .Goalsworp .goalaeorp_main {
     padding-bottom: 50px; }
     .Goalsworp .goalaeorp_main .colops_itme .col_aps .card {
@@ -1433,6 +1462,7 @@ header.header {
         .latest_news .latest_manu .latest_item .red_more a:hover {
           color: #eb1b2b; }
           .latest_news .latest_manu .latest_item .red_more a:hover i {
+            color: #eb1b2b;
             margin-left: 20px;
             margin-right: 10px; }
 
@@ -1446,9 +1476,9 @@ header.header {
       transition: all 0.5s;
       border: 1px solid #ddd; }
       .brand_worp .brand_item img:hover {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2); }
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
 
 .Contact_worp {
   background-image: url(../imgs/cbn.jpg);
@@ -1504,7 +1534,7 @@ header.header {
     margin-bottom: 30px; }
     .Contact_worp .counter_bnt a {
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 600;
       background: #eb1b2b;
       color: #fff;
       line-height: 52px;
@@ -1517,7 +1547,10 @@ header.header {
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #fff; }
+      color: #fff;
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
       .Contact_worp .counter_bnt a:hover {
         color: #eb1b2b;
         background-color: #fff; }
@@ -1532,8 +1565,7 @@ header.header {
     border-bottom: 1px solid #ddd;
     padding: 0;
     color: #fff; }
-    .Contact_worp .main_form input:hover,
-    .Contact_worp .main_form input .active {
+    .Contact_worp .main_form input:hover, .Contact_worp .main_form input:focus {
       border-bottom: 1px solid #eb1b2b; }
   .Contact_worp .main_form ::-webkit-input-placeholder {
     color: #fff; }
@@ -1556,8 +1588,7 @@ header.header {
       padding: 0px;
       height: 40px;
       color: #fff; }
-      .Contact_worp .main_form .from_group textarea:hover,
-      .Contact_worp .main_form .from_group textarea .active {
+      .Contact_worp .main_form .from_group textarea:hover, .Contact_worp .main_form .from_group textarea:focus {
         border-bottom: 1px solid #eb1b2b; }
     .Contact_worp .main_form .from_group ::-webkit-input-placeholder {
       color: #fff; }
@@ -1770,6 +1801,36 @@ header.header {
           transition: all 0.5s; }
         .footer .footer_bottom .bottom_fter .list-itme:hover a {
           color: #eb1b2b; }
+
+.filtering_worp .Isotopemanu {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.filtering_worp .ctm_row .ctm_col .filter_items {
+  position: relative; }
+  .filtering_worp .ctm_row .ctm_col .filter_items img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .filtering_worp .ctm_row .ctm_col .filter_items .over_layhed {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease; }
+    .filtering_worp .ctm_row .ctm_col .filter_items .over_layhed:hover {
+      bottom: 0;
+      height: 100%; }
+    .filtering_worp .ctm_row .ctm_col .filter_items .over_layhed .over_hed {
+      color: #fff; }
+    .filtering_worp .ctm_row .ctm_col .filter_items .over_layhed .over_pra {
+      color: #fff; }
 
 @media (max-width: 1024px) {
   .Mission .mainMission .MissionTitle .Missionhead {

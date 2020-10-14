@@ -114,7 +114,6 @@
                     text-transform: capitalize;
                     color: #333;
                     transition: all 0.5s;
-                    
                         i {
                             transition: all 0.5s;
                             padding-top: 2px;
@@ -122,9 +121,8 @@
                             margin-right: 20px;
                         }
                     &:hover {
-                        
                         color: #eb1b2b;
-                        i {
+                        i {color: #eb1b2b;
                             margin-left: 20px;
                             margin-right: 10px;
                         }

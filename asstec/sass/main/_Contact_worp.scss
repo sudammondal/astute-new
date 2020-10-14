@@ -67,7 +67,7 @@
         margin-bottom: 30px;
         a{
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 600;
             background: #eb1b2b;
             color: #fff;
             line-height: 52px;
@@ -79,6 +79,8 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #fff;
+            outline: none;
+            box-shadow: none;
             &:hover {
                 color: #eb1b2b;
                 background-color: #fff;
@@ -97,7 +99,7 @@
             padding: 0;
             color: #fff;
             &:hover,
-            .active {
+            &:focus {
                 border-bottom: 1px solid #eb1b2b;
             }
         }
@@ -117,7 +119,7 @@
                 height: 40px;
                 color: #fff;
                 &:hover,
-                .active {
+                &:focus{
                     border-bottom: 1px solid #eb1b2b;
                 }
             }
