@@ -24,8 +24,6 @@
             text-transform: capitalize;
             font-family: 'Montserrat', sans-serif;
             color: #fff;
-            
-            
         }
         .img_star {
             margin-bottom: 9px;
@@ -33,12 +31,11 @@
         .contact_pra {
             max-width: 552px;
             width: 100%;
-            margin: 0 auto;
+            margin: 0 auto 49px;
             color: #fff;
             font-weight: 400;
             font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 49px;
 
         }
     }
@@ -58,7 +55,6 @@
             font-size: 14px;
             font-weight: 400;
             color: #fff;
-            margin-top: 6px;
             margin: 5px;
         }
     }
@@ -100,7 +96,7 @@
             color: #fff;
             &:hover,
             &:focus {
-                border-bottom: 1px solid #eb1b2b;
+                border-bottom-color:#eb1b2b;
             }
         }
         ::placeholder {
@@ -120,7 +116,7 @@
                 color: #fff;
                 &:hover,
                 &:focus{
-                    border-bottom: 1px solid #eb1b2b;
+                    border-bottom-color: #eb1b2b;
                 }
             }
             ::placeholder {

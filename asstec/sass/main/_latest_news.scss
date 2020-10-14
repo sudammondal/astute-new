@@ -20,12 +20,11 @@
         .laest_pra {
             max-width: 552px;
             width: 100%;
-            margin: 0 auto;
+            margin: 0 auto 49px;
             color: #333;
             font-weight: 400;
             font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 49px;
 
         }
 
@@ -122,7 +121,8 @@
                         }
                     &:hover {
                         color: #eb1b2b;
-                        i {color: #eb1b2b;
+                        i {
+                            color: #eb1b2b;
                             margin-left: 20px;
                             margin-right: 10px;
                         }

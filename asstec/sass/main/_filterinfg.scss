@@ -26,7 +26,7 @@
                     &:hover {
                         a {
                             background-color: #f7091d;
-                            border: 1px solid #ddd;
+                            border-color:  #ddd;
                             transform: scale(1.1);
                         }
                     }
@@ -40,7 +40,6 @@
                         max-width: 100%;
                         width: 100%;
                         line-height: 0;
-
                     }
                     .overlayhed {
                         position: absolute;
