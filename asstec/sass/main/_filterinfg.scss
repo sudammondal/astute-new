@@ -34,7 +34,6 @@
                 .img_overlay {
                     position: relative;
                     overflow: hidden;
-
                     .image {
                         display: block;
                         transition: all 0.5s;
@@ -54,7 +53,7 @@
                         z-index: 1;
                         .text {
                             white-space: nowrap;
-                            color: white;
+                            color: #fff;
                             font-size: 20px;
                             position: absolute;
                             overflow: hidden;
@@ -100,7 +99,6 @@
                 &:hover {
                     .img_overlay {
                         .image {
-
                             transform: scale(1.1);
                         }
                         .overlayhed {

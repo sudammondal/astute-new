@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
   //header js//
   $(window).scroll(function () {
@@ -127,6 +129,7 @@ $(document).ready(function () {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 3,
+    centerPadding: '0px',
     responsive: [{
         breakpoint: 1024,
         settings: {
@@ -233,17 +236,59 @@ $(document).ready(function () {
     
   //========== filtering========== //
 
+  // function isoTopActive() {
+  //   // Iso top js
+  //   $(".filtering_item_row").isotope({
+  //       itemSelector: '.custom_col',
+  //       layoutMode: 'fitRows'
+  //   });
+  //   var isOacTive = $('.isotopmein button').click(function () {
+  //       $(".isotopmein button").removeClass("active");
+  //       $(this).addClass("active");
+  //       var selector = $(this).attr('data-filter');
+  //       $(".filtering_item_row").isotope({
+  //           filter: selector,
+  //           animationOptions: {
+  //               duration: 750,
+  //               easing: 'linear',
+  //               queue: false,
+  //           }
+  //       });
+  //       return false;
+  //   });
+
+  // }
+  // isoTopActive();
+  //       /*---------LIGHT-BOX js-----------*/
+  // function lightBoxImages() {
+  //   var selectorG = '.icon_link';
+  //   if($(selectorG).length){
+  //       var instanceG = $(selectorG).imageLightbox({
+  //           quitOnDocClick:	false,
+  //           button:         true,
+  //           activity:       true,
+  //           overlay:        true,
+  //           arrows:         true,
+  //           preloadNext:    true,
+  //       });		
+  //   }
+  // }
+  // lightBoxImages();
+
+
+
   function isoTopActive() {
     // Iso top js
-    $(".filtering_item_row").isotope({
-        itemSelector: '.custom_col',
+    $(".ctm_row").isotope({
+        itemSelector: '.ctm_col',
         layoutMode: 'fitRows'
     });
-    var isOacTive = $('.isotopmein button').click(function () {
-        $(".isotopmein button").removeClass("active");
+
+    var isOacTive = $('.Isotopemanu button').click(function () {
+        $(".Isotopemanu button").removeClass("active");
         $(this).addClass("active");
         var selector = $(this).attr('data-filter');
-        $(".filtering_item_row").isotope({
+        $(".ctm_row").isotope({
             filter: selector,
             animationOptions: {
                 duration: 750,
@@ -253,9 +298,9 @@ $(document).ready(function () {
         });
         return false;
     });
-
   }
   isoTopActive();
+
         /*---------LIGHT-BOX js-----------*/
   function lightBoxImages() {
     var selectorG = '.icon_link';
@@ -273,5 +318,20 @@ $(document).ready(function () {
   lightBoxImages();
 
 
+
+  // pop up
+
+
+  function videoPopup() {
+    if ($('.popup-youtube').length) {
+        $('.popup-youtube').magnificPopup({
+            type: 'iframe',
+            // gallery:{
+            //   enabled:true
+            // }
+        });
+    }
+}
+videoPopup();
 
 });

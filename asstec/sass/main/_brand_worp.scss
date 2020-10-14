@@ -1,10 +1,13 @@
 .brand_worp {
-    padding: 100px 0;
+    padding: 90px 0;
     .brand_item {
         text-align: center; 
+        outline: none;
         img {
+            padding: 10px 10px;
             transition: all 0.5s;
-            border: 1px solid #ddd;
+            // border: 1px solid #ddd;
+            outline: none;
             &:hover {
                 transform: scale(1.1);
             }
